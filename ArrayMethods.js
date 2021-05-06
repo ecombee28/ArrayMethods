@@ -26,7 +26,7 @@ class ArrayMethods {
         Name: "Escalade",
         Color: "White",
         Type: "Truck",
-        Price: 45000,
+        Price: 45453,
       },
       {
         vin: 784521,
@@ -42,7 +42,7 @@ class ArrayMethods {
         Name: "Camaro",
         Color: "Black",
         Type: "Car",
-        Price: 55000,
+        Price: 55430,
       },
       {
         vin: 100232,
@@ -50,7 +50,7 @@ class ArrayMethods {
         Name: "Tundra",
         Color: "White",
         Type: "Truck",
-        Price: 45000,
+        Price: 45200,
       },
     ];
   }
@@ -168,6 +168,21 @@ class ArrayMethods {
   }
 
   /*
+    Sort Method. This method sorts the array based on the conditions that you
+    set.
+   */
+
+  sortMethod() {
+    const sortByPrice = this.cars.sort((p1, p2) =>
+      p1.Price > p2.Price ? 1 : -1
+    );
+    console.log(sortByPrice);
+
+    const sortByColor = this.cars.sort((p1, p2) => (p1.vin > p2.vin ? 1 : -1));
+    console.log(sortByColor);
+  }
+
+  /*
      This is just a very simple example of how you can 
      combine these array methods to better suit your needs.
     */
@@ -209,6 +224,10 @@ arrayMethod.findMethod();
 console.log("\nThis is for the forEach method");
 console.log("===========================================");
 arrayMethod.forEachMethod();
+
+console.log("\nThis is for the sort method");
+console.log("===========================================");
+arrayMethod.sortMethod();
 
 console.log("\nThis is a combination of methods");
 console.log("===========================================");
