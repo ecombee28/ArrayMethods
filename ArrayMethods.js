@@ -56,9 +56,9 @@ class ArrayMethods {
   }
 
   /*
-   Filter Method. The filter method filters out the 
-   results depending on your set parameters
-  */
+     Filter Method. The filter method filters out the 
+     results depending on your set parameters
+    */
 
   filterMethod() {
     const greaterPrice = this.cars.filter((price) => price.Price > 40000);
@@ -72,10 +72,10 @@ class ArrayMethods {
   }
 
   /*
-   Map Method. The map method will loop thru the object or array 
-   display information or even do some logic. It is like the 
-   traditional for loop
-  */
+     Map Method. The map method will loop thru the object or array 
+     display information or even do some logic. It is like the 
+     traditional for loop
+    */
 
   mapMethod() {
     const getAll = this.cars.map((m) => {
@@ -92,9 +92,9 @@ class ArrayMethods {
   }
 
   /*
-   Reduce Method. The reduce method will go thru your array or object
-   and add up certain parameters for.
-  */
+     Reduce Method. The reduce method will go thru your array or object
+     and add up certain parameters for.
+    */
 
   reduceMethod() {
     const getTotalCost = this.cars.reduce((acc, cur) => acc + cur.Price, 0);
@@ -115,10 +115,10 @@ class ArrayMethods {
   }
 
   /*
-   Some Method. The Some method will traverse the array or object 
-   and when the first element or value has meet your conditions will return
-   a true or false.
-  */
+     Some Method. The Some method will traverse the array or object 
+     and when the first element or value has meet your conditions will return
+     a true or false.
+    */
   someMethod() {
     const getOneTruck = this.cars.some((t) => t.Type == "Truck");
     console.log(`There is at least one object that is a truck; ${getOneTruck}`);
@@ -130,10 +130,10 @@ class ArrayMethods {
   }
 
   /*
-   Every Method. The Every method will traverse the array or object 
-   and if the every element or value has meet your conditions will return
-   a true or false.
-  */
+     Every Method. The Every method will traverse the array or object 
+     and if the every element or value has meet your conditions will return
+     a true or false.
+    */
 
   everyMethod() {
     const allIsTrucks = this.cars.every((t) => t.Type == "Truck");
@@ -144,9 +144,30 @@ class ArrayMethods {
   }
 
   /*
-   This is just a very simple example of how you can 
-   combine these array methods to better suit your needs.
-  */
+      Find Method. This method just finds the very first item in the array or object 
+      that matched your search conditions.
+    */
+
+  findMethod() {
+    const foundModel = this.cars.find((m) => m.Model == "Honda");
+    console.log(foundModel);
+  }
+
+  //foreach
+
+  forEachMethod() {
+    const getAllNames = this.cars.forEach((items) => console.log(items.Name));
+
+    console.log(`\nThis shows all the trucks in the array:\n`);
+    const getAllTrucks = this.cars.forEach((i) => {
+      i.Type == "Truck" && console.log(i.Name);
+    });
+  }
+
+  /*
+     This is just a very simple example of how you can 
+     combine these array methods to better suit your needs.
+    */
   combinationOfMethods() {
     const areAllTrucksWhite = this.cars
       .filter((f) => f.Type == "Truck")
@@ -177,6 +198,14 @@ arrayMethod.someMethod();
 console.log("\nThis is for the Every method");
 console.log("===========================================");
 arrayMethod.everyMethod();
+
+console.log("\nThis is for the find method");
+console.log("===========================================");
+arrayMethod.findMethod();
+
+console.log("\nThis is for the forEach method");
+console.log("===========================================");
+arrayMethod.forEachMethod();
 
 console.log("\nThis is a combination of methods");
 console.log("===========================================");
