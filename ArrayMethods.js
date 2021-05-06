@@ -1,5 +1,5 @@
 /*
-  This is a simple example of the array methods that are available 
+  This is a simple example of some of the array methods that are available 
   in JavaScript
 */
 
