@@ -153,7 +153,10 @@ class ArrayMethods {
     console.log(foundModel);
   }
 
-  //foreach
+  /*
+    ForEach Method. This method is similar to the for loop where it will loop each item and 
+    preform what ever conditions that you have layed out.
+  */
 
   forEachMethod() {
     const getAllNames = this.cars.forEach((items) => console.log(items.Name));
